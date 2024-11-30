@@ -9,8 +9,7 @@ Release: 1
 License: LGPLv2 and GPLv2
 Group: System Environment/Libraries
 URL: http://www.soft-switch.org
-%undefine _disable_source_fetch
-Source0: https://github.com/freeswitch/spandsp/archive/%{commit}.tar.gz
+Source0: %{name}-%{version}.tar.gz
 BuildRoot: %{_tmppath}/spandsp-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildRequires: libtiff-devel%{?_isa}
@@ -20,6 +19,7 @@ BuildRequires: libsndfile-devel%{?_isa}
 BuildRequires: doxygen
 BuildRequires: libxslt
 BuildRequires: docbook-style-xsl
+BuildRequires: autoconf libtool automake
 
 %description
 SpanDSP is a library of DSP functions for telephony, in the 8000
@@ -50,7 +50,7 @@ Group: Development/Libraries
 SpanDSP API documentation.
 
 %prep
-%autosetup -n spandsp-%{commit}
+%setup -n %{name}-%{version}
 
 %build
 autoreconf -i
