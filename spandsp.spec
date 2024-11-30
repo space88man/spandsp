@@ -5,7 +5,7 @@
 Summary: A DSP library for telephony.
 Name: spandsp3
 Version: 3.0.0
-Release: 39
+Release: 39%{?dist}
 License: LGPLv2 and GPLv2
 Group: System Environment/Libraries
 URL: http://www.soft-switch.org
